@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music and Mental Health Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: auto;
+        }
+        #bar-chart, #parallel-coordinates, #stacked-bar {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #focus-views {
+            display: flex;
+            justify-content: space-between;
+        }
+        #parallel-coordinates, #stacked-bar {
+            width: 48%;
+        }
+        .title {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .legend {
+            font-size: 0.9em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div id="bar-chart">
+            <div class="title">Favorite Music Genres (Overview)</div>
+        </div>
+        <div id="focus-views">
+            <div id="parallel-coordinates">
+                <div class="title">Mental Health Scores by Listening Hours</div>
+            </div>
+            <div id="stacked-bar">
+                <div class="title">Genre Listening Frequency</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
